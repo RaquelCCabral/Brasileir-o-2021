@@ -1,0 +1,22 @@
+# Conversão de um número inteiro n de uma base x <= 10 para uma base y <= 10
+def conversao(n,x,y):
+    a = [int(i) for i in str(n)] # Lista de algarismos de n
+    a.reverse() # Lista invertida
+    j = 0
+    d = 0
+    while j < len(a):
+        d = d + a[j] * x**j # Conversão de n na base x para base decimal
+        j += 1
+    if y == 10:
+        return d # n na base decimal
+    else:
+        q = d
+        l = [] # Lista para adicionar algarismos de n na base y
+        while q > 0:
+            r = q % y # Restos da divisão que equivalem aos algarismos de n na base y
+            l.append(r)
+            q = q//y
+        l.reverse() # Inverto a lista pois os algarismos sao adicionados de forma invertida
+        s = [str(k) for k in l] # Seleciono os elementos da nova lista
+        num = int("".join(s)) # Transformo a nova lista no novo número (n na base y)
+    return num
