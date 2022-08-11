@@ -76,7 +76,7 @@ for i in range(len(time)): # Somatizo vitórias/derrotas de cada time como manda
         try:
             if mandante_da_vitoria[k] == time[i]:
                 a += 1    
-        except KeyError: k
+        except KeyError: None
         k += 1
     b = 0
     k = 0
