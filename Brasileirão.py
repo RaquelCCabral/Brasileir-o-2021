@@ -84,7 +84,7 @@ for i in range(len(time)): # Somatizo vitórias/derrotas de cada time como manda
         try:
             if mandante_da_derrota[k] == time[i]:
                 b += 1    
-        except KeyError: k
+        except KeyError: None
         k += 1
     c = 0
     k = 0
@@ -92,7 +92,7 @@ for i in range(len(time)): # Somatizo vitórias/derrotas de cada time como manda
         try:
             if visitante_da_vitoria[k] == time[i]:
                 c += 1    
-        except KeyError: k
+        except KeyError: None
         k += 1
     d = 0
     k = 0
@@ -100,7 +100,7 @@ for i in range(len(time)): # Somatizo vitórias/derrotas de cada time como manda
         try:
             if visitante_da_derrota[k] == time[i]:
                 d += 1    
-        except KeyError: k
+        except KeyError: None
         k += 1
     df.loc[i] = [time[i], a, b, c, d] # Preencho a tabela criada
 
