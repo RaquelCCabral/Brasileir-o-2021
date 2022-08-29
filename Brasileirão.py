@@ -51,6 +51,8 @@ c = pd.DataFrame(zip(time, pontos, jogos, vitorias, empates, derrotas), columns 
 classif = pd.merge(pd.merge(pd.merge(c, gp, how = 'inner', on = 'Time'), gc, how = 'inner', on = 'Time'), sg, how = 'inner', on = 'Time') # Agrupo as séries com os dataframes
 classificacao = classif.sort_values(by = ['P', 'V', 'SG', 'GP', 'GC'], ascending = False) # Ordeno a tabela de classificação
 
+classificacao.to_excel(r'C:\Users\Raquel\Python\Classificação.xlsx', index = False)
+
 def colorir_coluna (n, m, cor, col): # Faço uma função simples so pra colorir uma coluna inteira (n = colunas, m = linhas, cor = string da cor que eu quero, col = numero da coluna que eu quero colorir)
     l = ['w']*n
     l[col-1] = cor
