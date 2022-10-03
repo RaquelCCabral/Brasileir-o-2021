@@ -1,0 +1,95 @@
+/*Na página inteira tentei investi em cores que combinassem com a da bandeira do Qatar*/
+
+body{
+    background-color: rgb(77, 4, 44);
+    text-align: center; /*Alinhando o conteúdo da página no centro*/
+}
+
+table{
+    border: 1px solid black; 
+    border-collapse: collapse;
+    width: 45%;
+    display: inline-block; /*Alinhar duas tabelas por "linha" */
+    margin: 2px; /*Espaçamento entre as tabelas que estão lado a lado para não ficarem coladas*/
+    background-color:antiquewhite; 
+    padding: 2px; /*Espaço para deixar alem da borda a cor da tabela para dar um efeito*/
+}
+
+th{
+    border: 1px solid black;
+    color: rgb(77, 4, 44); /*Cor das letras do cabeçalho para separar esteticamente os tópicos dos dados*/
+    background-color: rgb(251, 168, 168); /*Cor do cabeçalho para separar esteticamente os tópicos dos dados*/
+    width: 25%;
+}
+
+td{
+    border: 1px solid black;
+    min-width: 50px; /*Para impedir que as últimas colunas (que apresentam cabeçalho menor pois são siglas) fiquem muito estreitas, tirando a harmonia da tabela*/
+}
+
+.titulo{ 
+    font-size: 50px;
+    color: white;
+}
+
+/*Separei por datas para ficar um estilo separado em grupos de 4 jogos como uma caixa ou tabela*/
+.nov21, .nov23, .nov25, .nov27, .nov29, .dez1{
+    display: inline-block;
+    border: 1px dotted black;
+    width: 30%;
+}
+
+.nov22, .nov24, .nov26, .nov28, .nov30, .dez2{
+    display: inline-block;
+    border: 1px dotted black;
+    width: 30%;
+}
+
+/*Jogos alternados por cores de fundo para ter uma estética mais atrativa*/
+.jogo1, .jogo3, .jogo5, .jogo7, .jogo9, .jogo11, .jogo13, .jogo15, .jogo17, .jogo19, .jogo21, .jogo23, .jogo25, .jogo27, .jogo29, 
+.jogo31, .jogo33, .jogo35, .jogo37, .jogo39, .jogo41, .jogo43, .jogo45, .jogo47{
+    border: hidden;
+    background-color: antiquewhite;
+}
+
+.jogo2, .jogo4, .jogo6, .jogo8, .jogo10, .jogo12, .jogo14, .jogo16, .jogo18, .jogo20, .jogo22, .jogo24, .jogo26, .jogo28, .jogo30, 
+.jogo32, .jogo34, .jogo36, .jogo38, .jogo40, .jogo42, .jogo44, .jogo46, .jogo48{
+    border: hidden;
+    background-color: rgb(251, 168, 168);
+}
+
+img{
+    padding-bottom: 3%; /*Ajuste de posição das bandeiras para alinhar aos respectivos nomes*/
+}
+
+.input{ /*Alinhando os inputs em relação aos nomes das seleções nos jogos*/
+    position: relative;
+    text-align: center;
+    align-self: center;
+    box-sizing: border-box;
+}
+
+.oitavasEsq, .oitavasDir, .quartasEsq, .quartasDir, .semiEsq, .semiDir, .final{ /*Alinhando jogos da fase eliminatória para dar um estilo de tabela mata-mata*/
+    display: inline-block;
+    vertical-align: middle; /*Alinhamento vertical*/
+    background-color: rgb(77, 4, 44);
+    color:  rgb(251, 168, 168); 
+    margin: 0px;
+}
+
+.terceiro{
+    color:  rgb(251, 168, 168);
+}
+
+.imgT{
+    padding-bottom: 1%; /*Alinhando as bandeiras das seleções que disputam o terceiro lugar com seus respectivos nomes*/
+}
+
+.Campeao{
+    text-transform: uppercase;
+    color:white;
+}
+
+.imgCampeao{
+    padding-bottom: 2%; /*Alinhando a bandeira do campeao com seu nome*/
+}
